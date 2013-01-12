@@ -9,8 +9,8 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="检查网络 有线-无路由器 1. pppoe-setup
-2. pppoe-start WIFI wifi-menu note systemctl disalbe dhcpcd.service | 8.8.8.8 &gt; nameserver 分区 cfdisk: /, /home, swap &hellip;">
+  <meta name="description" content="检查网络 有线-无路由器 pppoe-setup
+pppoe-start WIFI wifi-menu note systemctl disalbe dhcpcd.service | 8.8.8.8 &gt; nameserver 分区 cfdisk: /, /home, swap mkfs. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,8 +98,8 @@
 
 <h4>有线-无路由器</h4>
 
-<pre><code>1. pppoe-setup
-2. pppoe-start
+<pre><code>pppoe-setup
+pppoe-start
 </code></pre>
 
 <h4>WIFI</h4>
@@ -129,14 +129,13 @@ mount {/, /home} {/mnt, /mnt/home}
 <pre><code>/etc/pacman.d/mirrorlist 163
 
 pacstrap /mnt base{,-devel} 
+pacstrap /mnt grub-bios
 </code></pre>
 
 <h4>note</h4>
 
 <pre><code>wifi  --&gt; MUST INSTALL dialog.
 pppoe --&gt; MUST INSTALL rp-pppoe
-
-pacstrap /mnt grub-bios
 
 多系统 --&gt; MUST INSTLL os-prober
 </code></pre>
