@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://coswind.github.com/atom.xml" rel="self"/>
   <link href="http://coswind.github.com/"/>
-  <updated>2013-01-11T16:01:07+08:00</updated>
+  <updated>2013-01-12T22:20:05+08:00</updated>
   <id>http://coswind.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Archlinux-2012.12 安装]]></title>
+    <link href="http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/"/>
+    <updated>2013-01-12T21:25:00+08:00</updated>
+    <id>http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang</id>
+    <content type="html"><![CDATA[<h2>检查网络</h2>
+
+<h4>有线-无路由器</h4>
+
+<pre><code>1. pppoe-setup
+2. pppoe-start
+</code></pre>
+
+<h4>WIFI</h4>
+
+<pre><code>wifi-menu
+</code></pre>
+
+<h4>note</h4>
+
+<pre><code>systemctl disalbe dhcpcd.service | 8.8.8.8 &gt; nameserver
+</code></pre>
+
+<h2>分区</h2>
+
+<pre><code>cfdisk: /, /home, swap
+
+mkfs.ext4 {/, /home}
+mkswap swap
+swapon swap
+swapon -s
+
+mount {/, /home} {/mnt, /mnt/home}
+</code></pre>
+
+<h2>安装基本系统</h2>
+
+<pre><code>/etc/pacman.d/mirrorlist 163
+
+pacstrap /mnt base{,-devel} 
+</code></pre>
+
+<h4>note</h4>
+
+<pre><code>wifi  --&gt; MUST INSTALL dialog.
+pppoe --&gt; MUST INSTALL rp-pppoe
+
+pacstrap /mnt grub-bios
+
+多系统 --&gt; MUST INSTLL os-prober
+</code></pre>
+
+<h2>生成fstab</h2>
+
+<pre><code>genfstab -p /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre>
+
+<h2>配置新系统</h2>
+
+<pre><code>arch-chroot /mnt
+</code></pre>
+
+<h4>Locale</h4>
+
+<pre><code>/etc/locale.gen
+
+locale-gen
+
+/etc/locale.conf
+
+LANG=
+</code></pre>
+
+<h4>Time</h4>
+
+<pre><code>timedatectl
+
+硬件时钟不正确 --&gt; ntpdate "asia.pool.ntp.org" &amp;&amp; hwclock -w
+</code></pre>
+
+<h4>设置主机名</h4>
+
+<pre><code>hostnamectl
+</code></pre>
+
+<h4>网络设置</h4>
+
+<pre><code>wireless --&gt; systemctl enable net-auto-wireless.service
+</code></pre>
+
+<h4>创建初始ramdisk</h4>
+
+<pre><code>mkinitcpio -p linux
+</code></pre>
+
+<h4>设置root密码</h4>
+
+<pre><code>passwd
+</code></pre>
+
+<h4>添加新用户</h4>
+
+<pre><code>useradd -m coswind 
+passwd coswind
+usermod -a -G video,audio,storage,optical,users,lp,wheel,log,scanner,games,power coswind
+</code></pre>
+
+<h2>安装grub</h2>
+
+<pre><code>grub-install /dev/sda
+防止启动时的warning: cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+
+<h2>Reboot</h2>
+
+<pre><code>exit 
+
+umount -a
+
+reboot
+</code></pre>
+]]></content>
+  </entry>
   
 </feed>
