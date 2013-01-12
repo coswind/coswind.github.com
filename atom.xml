@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://coswind.github.com/atom.xml" rel="self"/>
   <link href="http://coswind.github.com/"/>
-  <updated>2013-01-12T22:24:09+08:00</updated>
+  <updated>2013-01-12T22:31:09+08:00</updated>
   <id>http://coswind.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -61,7 +61,7 @@ pacstrap /mnt grub-bios
 <pre><code>wifi  --&gt; MUST INSTALL dialog.
 pppoe --&gt; MUST INSTALL rp-pppoe
 
-多系统 --&gt; MUST INSTLL os-prober
+多系统 --&gt; MUST INSTALL os-prober
 </code></pre>
 
 <h2>生成fstab</h2>
