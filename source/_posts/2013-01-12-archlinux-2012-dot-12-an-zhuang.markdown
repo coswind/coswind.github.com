@@ -44,7 +44,7 @@ categories:
     wifi  --> MUST INSTALL dialog.
     pppoe --> MUST INSTALL rp-pppoe
 
-    多系统 --> MUST INSTLL os-prober
+    多系统 --> MUST INSTALL os-prober
 
 ##生成fstab
 
