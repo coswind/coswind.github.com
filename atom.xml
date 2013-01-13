@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://coswind.github.com/atom.xml" rel="self"/>
   <link href="http://coswind.github.com/"/>
-  <updated>2013-01-12T22:31:09+08:00</updated>
+  <updated>2013-01-13T17:04:22+08:00</updated>
   <id>http://coswind.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,11 +14,79 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Archlinux基本配置]]></title>
+    <link href="http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/"/>
+    <updated>2013-01-13T16:42:00+08:00</updated>
+    <id>http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi</id>
+    <content type="html"><![CDATA[<h2>安装图形界面</h2>
+
+<p>安装X</p>
+
+<pre><code>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+</code></pre>
+
+<p>安装mesa获得3D支持</p>
+
+<pre><code>pacman -S mesa
+</code></pre>
+
+<p>安装显卡驱动</p>
+
+<pre><code>pacman -S nvidia
+</code></pre>
+
+<p>笔记本安装触屏驱动</p>
+
+<pre><code>pacman -S xf86-input-synaptics
+</code></pre>
+
+<h2>测试X</h2>
+
+<p>安装默认的测试环境</p>
+
+<pre><code>pacman -S xorg-twm xorg-xclock xterm
+rm ~/.xinitrc
+startx
+</code></pre>
+
+<p>删除了.xinitrc, startx会启动默认的测试环境</p>
+
+<h2>安装awesome</h2>
+
+<pre><code>pacman -S awesome
+</code></pre>
+
+<p>启动X的时候默认启动awesome</p>
+
+<pre><code>cp /etc/skel/.xinitrc ~/
+echo "exec awesome" &gt;&gt; ~/.xinitrc
+</code></pre>
+
+<p>如果想登录后自动启动awesome</p>
+
+<pre><code>[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx &gt;&gt; .bash_profile [or .zprofile]
+</code></pre>
+
+<h2>声音配置</h2>
+
+<p>默认不需要多余的配置，只需要解除默认的静音状态即可</p>
+
+<pre><code>pacman -S alsa-utils
+alsamixer
+</code></pre>
+
+<p>按照提示，解除master的静音状态</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Archlinux-2012.12 安装]]></title>
     <link href="http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/"/>
     <updated>2013-01-12T21:25:00+08:00</updated>
     <id>http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang</id>
     <content type="html"><![CDATA[<h2>检查网络</h2>
+
+<p>默认情况dhcp服务是enabled，如果使用的是有线，并且调制解调器和路由器工作良好，网络是正常可用的。</p>
 
 <h4>有线-无路由器</h4>
 
@@ -26,17 +94,25 @@
 pppoe-start
 </code></pre>
 
+<p>设置正确并启动成功，网络仍然无法连通:</p>
+
+<pre><code>systemctl disable dhcpcd.service
+pppoe-stop
+pppoe-start
+</code></pre>
+
+<p>还无法连通，试着先ping<code>8.8.8.8</code>，如果能ping通，将<code>8.8.8.8</code>加入nameserver</p>
+
 <h4>WIFI</h4>
 
 <pre><code>wifi-menu
 </code></pre>
 
-<h4>note</h4>
-
-<pre><code>systemctl disalbe dhcpcd.service | 8.8.8.8 &gt; nameserver
-</code></pre>
+<p>情况和上面类似</p>
 
 <h2>分区</h2>
+
+<p>一般来说，分三个区，swap分区为82</p>
 
 <pre><code>cfdisk: /, /home, swap
 
@@ -56,7 +132,7 @@ pacstrap /mnt base{,-devel}
 pacstrap /mnt grub-bios
 </code></pre>
 
-<h4>note</h4>
+<p>注意在安装完基本的软件包后，针对pppoe和wifi的上网方式，需要分别安装对应的软件包</p>
 
 <pre><code>wifi  --&gt; MUST INSTALL dialog.
 pppoe --&gt; MUST INSTALL rp-pppoe
@@ -81,8 +157,6 @@ pppoe --&gt; MUST INSTALL rp-pppoe
 locale-gen
 
 /etc/locale.conf
-
-LANG=
 </code></pre>
 
 <h4>Time</h4>
@@ -130,9 +204,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 <h2>Reboot</h2>
 
 <pre><code>exit 
-
 umount -a
-
 reboot
 </code></pre>
 ]]></content>
