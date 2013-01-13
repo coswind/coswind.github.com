@@ -8,20 +8,30 @@ categories:
 
 ##检查网络
 
+默认情况dhcp服务是enabled，如果使用的是有线，并且调制解调器和路由器工作良好，网络是正常可用的。
+
 ####有线-无路由器
 
     pppoe-setup
     pppoe-start
 
+设置正确并启动成功，网络仍然无法连通:
+
+    systemctl disable dhcpcd.service
+    pppoe-stop
+    pppoe-start
+
+还无法连通，试着先ping`8.8.8.8`，如果能ping通，将`8.8.8.8`加入nameserver
+
 ####WIFI
 
     wifi-menu
 
-####note
-
-    systemctl disalbe dhcpcd.service | 8.8.8.8 > nameserver
+情况和上面类似    
 
 ##分区
+
+一般来说，分三个区，swap分区为82
 
     cfdisk: /, /home, swap
     
@@ -39,7 +49,7 @@ categories:
     pacstrap /mnt base{,-devel} 
     pacstrap /mnt grub-bios
 
-####note
+注意在安装完基本的软件包后，针对pppoe和wifi的上网方式，需要分别安装对应的软件包
 
     wifi  --> MUST INSTALL dialog.
     pppoe --> MUST INSTALL rp-pppoe
@@ -62,8 +72,6 @@ categories:
     
     /etc/locale.conf
     
-    LANG=
-
 ####Time
 
     timedatectl
@@ -102,9 +110,7 @@ categories:
 ##Reboot
 
     exit 
-    
     umount -a
-    
     reboot
 
 
