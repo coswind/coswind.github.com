@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Archlinux基本配置."
+title: "Archlinux基本配置"
 date: 2013-01-13 16:42
 comments: true
 categories: 
