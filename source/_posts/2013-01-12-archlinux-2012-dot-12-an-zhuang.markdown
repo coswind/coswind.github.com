@@ -84,6 +84,7 @@ categories:
 
 ####网络设置
 
+    pacman -S wpa_actiond
     wireless --> systemctl enable net-auto-wireless.service
 
 ####创建初始ramdisk
