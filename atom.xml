@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://coswind.github.com/atom.xml" rel="self"/>
   <link href="http://coswind.github.com/"/>
-  <updated>2013-01-17T16:21:49+08:00</updated>
+  <updated>2013-01-17T17:07:57+08:00</updated>
   <id>http://coswind.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -173,7 +173,8 @@ locale-gen
 
 <h4>网络设置</h4>
 
-<pre><code>wireless --&gt; systemctl enable net-auto-wireless.service
+<pre><code>pacman -S wpa_actiond
+wireless --&gt; systemctl enable net-auto-wireless.service
 </code></pre>
 
 <h4>创建初始ramdisk</h4>

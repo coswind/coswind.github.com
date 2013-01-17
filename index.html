@@ -264,7 +264,8 @@ locale-gen
 
 <h4>网络设置</h4>
 
-<pre><code>wireless --&gt; systemctl enable net-auto-wireless.service
+<pre><code>pacman -S wpa_actiond
+wireless --&gt; systemctl enable net-auto-wireless.service
 </code></pre>
 
 <h4>创建初始ramdisk</h4>
