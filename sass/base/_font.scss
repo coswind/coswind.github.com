@@ -15,3 +15,13 @@ $font-icon-path: "/font/fontawesome-webfont";
 	font-weight: normal;
 	font-style: normal;
 }
+
+$font-cubiq: cubiq;
+$font-cubiq-path: "/font/miso-cubiq.woff";
+
+@font-face {
+	font-family: '#{$font-cubiq}';
+	src: url('#{$font-cubiq-path}') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

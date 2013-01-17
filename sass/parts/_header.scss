@@ -19,6 +19,7 @@ $header-height: 30px;
 	}
 	h1{
 		float: left;
+        font-family: $font-cubiq;
 		font-weight: 300;
 		font-size: 30px;
 		@media screen and (max-width: 1040px){
