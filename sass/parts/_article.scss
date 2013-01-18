@@ -33,7 +33,7 @@ article{
 			position: relative;
 			&:before{
 				content: "\f061";
-				font: 1.3em $font-icon;
+				font: 1.3em;
 				line-height: 1.6em;
 				position: absolute;
 				left: 0;
@@ -112,7 +112,7 @@ article{
 			&:before{
 				content: "\f040";
 				color: $color-gray03;
-				font: 1.3em $font-icon;
+				font: 1.3em;
 				line-height: 1.6em;
 				position: absolute;
 				left: 0;
