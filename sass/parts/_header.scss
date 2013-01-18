@@ -61,7 +61,7 @@ $header-height: 30px;
 				&:after{
 					content: "\f078";
 					color: $color-gray03;
-					font: 12px;
+					font: 12px $font-icon;
 					padding-left: 10px;
 				}
 				&:only-child{
@@ -112,7 +112,7 @@ $header-height: 30px;
 					&:after{
 						content: "\f054";
 						color: $color-gray02;
-						font: 12px;
+						font: 12px $font-icon;
 						padding-left: 10px;
 					}
 					&:hover{
@@ -181,12 +181,13 @@ $header-height: 30px;
 				@include border-radius(5px 5px 5px 0);
 				&:before{
 					content: "\f077";
+                    font-family: $font-icon;
 				}
 			}
 			&:before{
 				content: "\f078";
 				color: $color-gray04;
-				font: 16px;
+				font: 16px $font-icon;
 				line-height: 30px;
 				position: absolute;
 				top: 0;
@@ -227,7 +228,7 @@ $header-height: 30px;
 			&:before{
 				content: "\f002";
 				color: #f2f2f2;
-				font: 20px;
+				font: 20px $font-icon;
 				line-height: 30px;
 				position: absolute;
 				top: 0;
@@ -237,6 +238,7 @@ $header-height: 30px;
 				background: $color-gray03;
 				&:before{
 					content: "\f00d";
+                    font-family: $font-icon;
 				}
 			}
 		}
@@ -278,7 +280,7 @@ $header-height: 30px;
 		&:before{
 			content: "\f002";
 			color: $color-gray03;
-			font: 18px;
+			font: 18px $font-icon;
 			line-height: 30px;
 			position: absolute;
 			top: 0;

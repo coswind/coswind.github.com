@@ -65,9 +65,18 @@
 					color: $color-gray01;
 				}
 			}
-			.date:before{content: "\f073";}
-			.tags:before{content: "\f02c";}
-			.comments:before{content: "\f075";}
+			.date:before{
+                content: "\f073";
+                font-family: $font-icon;
+            }
+			.tags:before{
+                content: "\f02c";
+                font-family: $font-icon;
+            }
+			.comments:before{
+                content: "\f075";
+                font-family: $font-icon;
+            }
 		}
 	}
 }
