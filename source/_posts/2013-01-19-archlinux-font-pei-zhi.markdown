@@ -12,7 +12,7 @@ categories:
 
 首先要了解的是系统将字体分为那几大类？
 
-> 主要分文三大类，`衬型`，`非衬型`和`等宽`，具体介绍和效果可以见[这里](http://wenq.org/cloud/fcdesigner_local.html)
+> 主要分为三大类，`衬型`，`非衬型`和`等宽`，具体介绍和效果可以见[这里](http://wenq.org/cloud/fcdesigner_local.html)
 
 首先要了解的是系统是怎样选择字体的？
 
