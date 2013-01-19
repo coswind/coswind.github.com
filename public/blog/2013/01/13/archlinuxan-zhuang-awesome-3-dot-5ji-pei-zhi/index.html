@@ -1,0 +1,191 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Archlinux基本配置 - COSWIND BLOG</title>
+	<meta name="author" content="Yi Xia">
+
+	
+	<meta name="description" content="安装图形界面 安装X pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils 安装mesa获得3D支持 pacman -S mesa 安装显卡驱动 pacman -S nvidia 笔记本安装触屏驱动 pacman -S xf86 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="COSWIND BLOG" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">COSWIND BLOG</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">BLOG</a></li>
+	<li><a href="/blog/archives">ARCHIVES</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">BLOG</a></li>
+	<li><a href="/blog/archives">ARCHIVES</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:coswind.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:coswind.github.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Archlinux基本配置</h2>
+	<div class="entry-content"><h2>安装图形界面</h2>
+
+<p>安装X</p>
+
+<pre><code>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
+</code></pre>
+
+<p>安装mesa获得3D支持</p>
+
+<pre><code>pacman -S mesa
+</code></pre>
+
+<p>安装显卡驱动</p>
+
+<pre><code>pacman -S nvidia
+</code></pre>
+
+<p>笔记本安装触屏驱动</p>
+
+<pre><code>pacman -S xf86-input-synaptics
+</code></pre>
+
+<h2>测试X</h2>
+
+<p>安装默认的测试环境</p>
+
+<pre><code>pacman -S xorg-twm xorg-xclock xterm
+rm ~/.xinitrc
+startx
+</code></pre>
+
+<p>删除了.xinitrc, startx会启动默认的测试环境</p>
+
+<h2>安装awesome</h2>
+
+<pre><code>pacman -S awesome
+</code></pre>
+
+<p>启动X的时候默认启动awesome</p>
+
+<pre><code>cp /etc/skel/.xinitrc ~/
+echo "exec awesome" &gt;&gt; ~/.xinitrc
+</code></pre>
+
+<p>如果想登录后自动启动awesome</p>
+
+<pre><code>[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx &gt;&gt; .bash_profile [or .zprofile]
+</code></pre>
+
+<h2>声音配置</h2>
+
+<p>默认不需要多余的配置，只需要解除默认的静音状态即可</p>
+
+<pre><code>pacman -S alsa-utils
+alsamixer
+</code></pre>
+
+<p>按照提示，解除master的静音状态</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-13T16:42:00+08:00" pubdate data-updated="true">Jan 13<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    Yi Xia
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
