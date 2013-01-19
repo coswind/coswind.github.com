@@ -1,24 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[COSWIND BLOG]]></title>
-  <link href="http://coswind.github.com/atom.xml" rel="self"/>
-  <link href="http://coswind.github.com/"/>
-  <updated>2013-01-19T20:53:45+08:00</updated>
-  <id>http://coswind.github.com/</id>
-  <author>
-    <name><![CDATA[Yi Xia]]></name>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Archlinux-Font 配置 - COSWIND BLOG</title>
+	<meta name="author" content="Yi Xia">
+
+	
+	<meta name="description" content="默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。 系统配置 [/etc/fonts/*] 首先要了解的是系统将字体分为那几大类？ 主要分文三大类，衬型，非衬型和等宽，具体介绍和效果可以见这里 首先要了解的是系统是怎样选择字体的？ &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="COSWIND BLOG" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="/javascripts/jquery-1.7.2.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">COSWIND BLOG</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">BLOG</a></li>
+	<li><a href="/blog/archives">ARCHIVES</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">BLOG</a></li>
+	<li><a href="/blog/archives">ARCHIVES</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:coswind.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
     
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:coswind.github.com">
+	</form>
+</nav>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Archlinux-Font 配置]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi/"/>
-    <updated>2013-01-19T18:48:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi</id>
-    <content type="html"><![CDATA[<p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Archlinux-Font 配置</h2>
+	<div class="entry-content"><p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
 
 <h2>系统配置 [/etc/fonts/*]</h2>
 
@@ -150,8 +206,8 @@
 相比较下，我更喜欢<code>wenquanyi zen hei sharp</code>, 十分适合终端显示，而<code>wenquanyi micro hei</code>则十分适合浏览器显示。</p>
 
 <p>无图无真相，下面是系统的字体配置效果。
-<img src="http://coswind.github.com/images/urxvt-zh-screenshot.png" alt="urxvt-zh-screenshot.png" />
-<img src="http://coswind.github.com/images/chromium-zh-screenshot.png" alt="chromium-zh-screenshot.png" /></p>
+<img src="/images/urxvt-zh-screenshot.png" alt="urxvt-zh-screenshot.png" />
+<img src="/images/chromium-zh-screenshot.png" alt="chromium-zh-screenshot.png" /></p>
 
 <h2>用户配置 [~/.config/fontconfig/fonts.conf]</h2>
 
@@ -214,205 +270,60 @@
 
 <blockquote><p>这里还要补充的一点是<code>mode</code>的设定，是<code>append</code>，而不是<code>prepend</code>，前者是将字体的优先级设定在匹配字体的后面，即在匹配不到的时候作为第一候选，而后者相反。
 因为中文字型大都包含英文字体，所以使得不仅中文是设定字体，英文都强制的使用了中文字型里的英文字体，实在是太难看，而且所有的英文字体都是如此。</p></blockquote>
-]]></content>
-  </entry>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
-  <entry>
-    <title type="html"><![CDATA[Archlinux基本配置]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/"/>
-    <updated>2013-01-13T16:42:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi</id>
-    <content type="html"><![CDATA[<h2>安装图形界面</h2>
 
-<p>安装X</p>
 
-<pre><code>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
-</code></pre>
+<time datetime="2013-01-19T18:48:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time></div>
+	<div class="tags">
 
-<p>安装mesa获得3D支持</p>
+</div>
+	
+</div></article>
 
-<pre><code>pacman -S mesa
-</code></pre>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
-<p>安装显卡驱动</p>
 
-<pre><code>pacman -S nvidia
-</code></pre>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
 
-<p>笔记本安装触屏驱动</p>
+    Yi Xia
 
-<pre><code>pacman -S xf86-input-synaptics
-</code></pre>
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-<h2>测试X</h2>
 
-<p>安装默认的测试环境</p>
 
-<pre><code>pacman -S xorg-twm xorg-xclock xterm
-rm ~/.xinitrc
-startx
-</code></pre>
 
-<p>删除了.xinitrc, startx会启动默认的测试环境</p>
 
-<h2>安装awesome</h2>
 
-<pre><code>pacman -S awesome
-</code></pre>
-
-<p>启动X的时候默认启动awesome</p>
-
-<pre><code>cp /etc/skel/.xinitrc ~/
-echo "exec awesome" &gt;&gt; ~/.xinitrc
-</code></pre>
-
-<p>如果想登录后自动启动awesome</p>
-
-<pre><code>[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx &gt;&gt; .bash_profile [or .zprofile]
-</code></pre>
-
-<h2>声音配置</h2>
-
-<p>默认不需要多余的配置，只需要解除默认的静音状态即可</p>
-
-<pre><code>pacman -S alsa-utils
-alsamixer
-</code></pre>
-
-<p>按照提示，解除master的静音状态</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Archlinux-2012.12 安装]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/"/>
-    <updated>2013-01-12T21:25:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang</id>
-    <content type="html"><![CDATA[<h2>检查网络</h2>
-
-<p>默认情况dhcp服务是enabled，如果使用的是有线，并且调制解调器和路由器工作良好，网络是正常可用的。</p>
-
-<h4>有线-无路由器</h4>
-
-<pre><code>pppoe-setup
-pppoe-start
-</code></pre>
-
-<p>设置正确并启动成功，网络仍然无法连通:</p>
-
-<pre><code>systemctl disable dhcpcd.service
-pppoe-stop
-pppoe-start
-</code></pre>
-
-<p>还无法连通，试着先ping<code>8.8.8.8</code>，如果能ping通，将<code>8.8.8.8</code>加入nameserver</p>
-
-<h4>WIFI</h4>
-
-<pre><code>wifi-menu
-</code></pre>
-
-<p>情况和上面类似</p>
-
-<h2>分区</h2>
-
-<p>一般来说，分三个区，swap分区为82</p>
-
-<pre><code>cfdisk: /, /home, swap
-
-mkfs.ext4 {/, /home}
-mkswap swap
-swapon swap
-swapon -s
-
-mount {/, /home} {/mnt, /mnt/home}
-</code></pre>
-
-<h2>安装基本系统</h2>
-
-<pre><code>/etc/pacman.d/mirrorlist 163
-
-pacstrap /mnt base{,-devel} 
-pacstrap /mnt grub-bios
-</code></pre>
-
-<p>注意在安装完基本的软件包后，针对pppoe和wifi的上网方式，需要分别安装对应的软件包</p>
-
-<pre><code>wifi  --&gt; MUST INSTALL dialog.
-pppoe --&gt; MUST INSTALL rp-pppoe
-
-多系统 --&gt; MUST INSTALL os-prober
-</code></pre>
-
-<h2>生成fstab</h2>
-
-<pre><code>genfstab -p /mnt &gt;&gt; /mnt/etc/fstab
-</code></pre>
-
-<h2>配置新系统</h2>
-
-<pre><code>arch-chroot /mnt
-</code></pre>
-
-<h4>Locale</h4>
-
-<pre><code>/etc/locale.gen
-
-locale-gen
-
-/etc/locale.conf
-</code></pre>
-
-<h4>Time</h4>
-
-<pre><code>timedatectl
-
-硬件时钟不正确 --&gt; ntpdate "asia.pool.ntp.org" &amp;&amp; hwclock -w
-</code></pre>
-
-<h4>设置主机名</h4>
-
-<pre><code>hostnamectl
-</code></pre>
-
-<h4>网络设置</h4>
-
-<pre><code>pacman -S wpa_actiond
-wireless --&gt; systemctl enable net-auto-wireless.service
-</code></pre>
-
-<h4>创建初始ramdisk</h4>
-
-<pre><code>mkinitcpio -p linux
-</code></pre>
-
-<h4>设置root密码</h4>
-
-<pre><code>passwd
-</code></pre>
-
-<h4>添加新用户</h4>
-
-<pre><code>useradd -m coswind 
-passwd coswind
-usermod -a -G video,audio,storage,optical,users,lp,wheel,log,scanner,games,power coswind
-</code></pre>
-
-<h2>安装grub</h2>
-
-<pre><code>grub-install /dev/sda
-防止启动时的warning: cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
-
-grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre>
-
-<h2>Reboot</h2>
-
-<pre><code>exit 
-umount -a
-reboot
-</code></pre>
-]]></content>
-  </entry>
-  
-</feed>
+</body>
+</html>
