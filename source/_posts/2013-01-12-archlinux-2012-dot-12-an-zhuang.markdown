@@ -3,7 +3,7 @@ layout: post
 title: "Archlinux-2012.12 安装"
 date: 2013-01-12 21:25
 comments: true
-categories: 
+categories: archlinux
 ---
 
 ##检查网络

@@ -3,7 +3,7 @@ layout: post
 title: "Archlinux-Font 配置"
 date: 2013-01-19 18:48
 comments: true
-categories: 
+categories: archlinux font
 ---
 
 默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。

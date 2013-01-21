@@ -3,7 +3,7 @@ layout: post
 title: "Archlinux基本配置"
 date: 2013-01-13 16:42
 comments: true
-categories: 
+categories: archlinux 
 ---
 
 ##安装图形界面

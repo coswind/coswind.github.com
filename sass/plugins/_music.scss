@@ -1,0 +1,29 @@
+/*! music player */
+#music_player {
+    position: fixed;
+    left: 32px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.music_bg_color {
+    width: 40px;
+    height: 40px;
+    background-color: $color-gray04;
+    border-radius:90px;
+}
+
+.music_bg_image {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    bottom: -10px;
+    background: url(/images/btn_icon.gif) no-repeat;
+    background-position: -230px -67px;
+}
+
+#music_player:hover .music_bg_color {
+    background-color: $color-gray03;
+}
+

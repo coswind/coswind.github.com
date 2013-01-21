@@ -289,6 +289,10 @@
 <time datetime="2013-01-19T18:48:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time></div>
 	<div class="tags">
 
+
+	<a class='category' href='/blog/categories/archlinux/'>archlinux</a>, <a class='category' href='/blog/categories/font/'>font</a>
+
+
 </div>
 	
 </div></article>
@@ -307,6 +311,38 @@
 
 
 </div>
+	<audio autoplay loop>
+    <source src="http://data4.5sing.com/T14zJ5ByYT1R47IVrK.mp3">
+</audio>
+<div id="music_player">
+    <div class="music_bg_color">
+        <div class="music_bg_image"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function($){
+        var isPlaying = true;
+        var el = $('.music_bg_image');
+        var audioEl = $('audio')[0];
+        $('#music_player').click(function() {
+            el.fadeOut();
+            if (isPlaying) {
+                el.css('background-position', '-207px -67px');
+                el.fadeIn(function() {
+                    audioEl.pause();
+                });
+            } else {
+                el.css('background-position', '-230px -67px');
+                el.fadeIn(function() {
+                    audioEl.play();
+                });
+            }
+            isPlaying = !isPlaying;
+        });
+    })(jQuery);
+</script>
+
+
 	<footer id="footer" class="inner">Copyright &copy; 2013
 
     Yi Xia
@@ -324,9 +360,6 @@
 
 
 
-<audio autoplay loop>
-    <source src="http://www.flashbluedesign.com/plugins/html5-audio-player/music/song.mp3">
-</audio>
 
 </body>
 </html>
