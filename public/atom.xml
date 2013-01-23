@@ -4,7 +4,7 @@
   <title><![CDATA[COSWIND BLOG]]></title>
   <link href="http://coswind.github.com/atom.xml" rel="self"/>
   <link href="http://coswind.github.com/"/>
-  <updated>2013-01-21T16:50:10+08:00</updated>
+  <updated>2013-01-21T21:02:06+08:00</updated>
   <id>http://coswind.github.com/</id>
   <author>
     <name><![CDATA[Yi Xia]]></name>
@@ -146,8 +146,9 @@
 
 <p>上面的配置文件则是各类字体在分别的类别中优先级，越靠前的字体，优先级越高。</p>
 
-<p>从上面两个配置文件我们可以基本上了解为什么Linux系统装完<code>wenquanyi zen hei</code>字体后，系统的中文就&#8221;默认&#8221;成了该字体，然而该字体在linux下，稍显模糊。
-相比较下，我更喜欢<code>wenquanyi zen hei sharp</code>, 十分适合终端显示，而<code>wenquanyi micro hei</code>则十分适合浏览器显示。</p>
+<p>从上面两个配置文件我们可以基本上了解为什么Linux系统装完<code>wenquanyi zen hei</code>字体后，系统的中文就&#8221;默认&#8221;成了该字体，然而该字体在linux下，稍显模糊。</p>
+
+<p>相比较下，我更喜欢<code>wenquanyi zen hei sharp</code>, 十分适合终端显示，而<code>wenquanyi micro hei</code>则十分适合浏览器显示。</p>
 
 <p>无图无真相，下面是系统的字体配置效果。
 <img src="http://coswind.github.com/images/urxvt-zh-screenshot.png" alt="urxvt-zh-screenshot.png" />
@@ -207,10 +208,11 @@
 </span><span class='line'>&lt;/match&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>很简单吧，就像前面介绍的，我们只要把自己喜欢的中文字体放在各类别的前面就可以了。
-这里再稍微解释一下为什么会有第一个<code>match</code>的配置，原因也很简单，<code>Terminus</code>字体属于不常见的字体，不在系统默认的字体分类里面。
-根据前面的介绍，不在三大分类的字体会被默认分为<code>sans-serif</code>，因而中文显示会是<code>wenquanyi micro hei</code>。
-但是该字体在终端下表现不太好，因此我们需要给它加上相应中文字体的设定。</p>
+<p>很简单吧，就像前面介绍的，我们只要把自己喜欢的中文字体放在各类别的前面就可以了。</p>
+
+<p>这里再稍微解释一下为什么会有第一个<code>match</code>的配置，原因也很简单，<code>Terminus</code>字体属于不常见的字体，不在系统默认的字体分类里面。</p>
+
+<p>根据前面的介绍，不在三大分类的字体会被默认分为<code>sans-serif</code>，因而中文显示会是<code>wenquanyi micro hei</code>。但是该字体在终端下表现不太好，因此我们需要给它加上相应中文字体的设定。</p>
 
 <blockquote><p>这里还要补充的一点是<code>mode</code>的设定，是<code>append</code>，而不是<code>prepend</code>，前者是将字体的优先级设定在匹配字体的后面，即在匹配不到的时候作为第一候选，而后者相反。
 因为中文字型大都包含英文字体，所以使得不仅中文是设定字体，英文都强制的使用了中文字型里的英文字体，实在是太难看，而且所有的英文字体都是如此。</p></blockquote>

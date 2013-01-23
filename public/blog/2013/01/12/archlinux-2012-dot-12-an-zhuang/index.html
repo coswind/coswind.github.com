@@ -241,7 +241,7 @@ reboot
 
 
 </div>
-	<audio autoplay loop>
+	<audio preload loop>
     <source src="http://data4.5sing.com/T14zJ5ByYT1R47IVrK.mp3">
 </audio>
 <div id="music_player">
@@ -251,24 +251,21 @@ reboot
 </div>
 <script type="text/javascript">
     (function($){
-        var isPlaying = true;
+        var isPlaying = localStorage.isPlaying || true;
         var el = $('.music_bg_image');
         var audioEl = $('audio')[0];
         $('#music_player').click(function() {
             el.fadeOut();
             if (isPlaying) {
                 el.css('background-position', '-207px -67px');
-                el.fadeIn(function() {
-                    audioEl.pause();
-                });
+                el.fadeIn(function() { audioEl.pause(); });
             } else {
                 el.css('background-position', '-230px -67px');
-                el.fadeIn(function() {
-                    audioEl.play();
-                });
+                el.fadeIn(function() { audioEl.play(); });
             }
             isPlaying = !isPlaying;
-        });
+            localStorage.isPlaying = isPlaying;
+        }).trigger('click');
     })(jQuery);
 </script>
 
