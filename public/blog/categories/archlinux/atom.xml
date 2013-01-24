@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: archlinux | COSWIND BLOG]]></title>
-  <link href="http://coswind.github.com/blog/categories/archlinux/atom.xml" rel="self"/>
-  <link href="http://coswind.github.com/"/>
-  <updated>2013-01-21T21:02:06+08:00</updated>
-  <id>http://coswind.github.com/</id>
+  <title><![CDATA[Category: archlinux | COSWIND'S BLOG]]></title>
+  <link href="http://coswind.herokuapp.com/blog/categories/archlinux/atom.xml" rel="self"/>
+  <link href="http://coswind.herokuapp.com/"/>
+  <updated>2013-01-24T21:54:56+08:00</updated>
+  <id>http://coswind.herokuapp.com/</id>
   <author>
     <name><![CDATA[Yi Xia]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Archlinux-Font 配置]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi/"/>
+    <link href="http://coswind.herokuapp.com/blog/2013/01/19/archlinux-font-pei-zhi/"/>
     <updated>2013-01-19T18:48:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi</id>
+    <id>http://coswind.herokuapp.com/blog/2013/01/19/archlinux-font-pei-zhi</id>
     <content type="html"><![CDATA[<p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
 
 <h2>系统配置 [/etc/fonts/*]</h2>
@@ -166,9 +166,9 @@
   
   <entry>
     <title type="html"><![CDATA[Archlinux基本配置]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/"/>
+    <link href="http://coswind.herokuapp.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/"/>
     <updated>2013-01-13T16:42:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi</id>
+    <id>http://coswind.herokuapp.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi</id>
     <content type="html"><![CDATA[<h2>安装图形界面</h2>
 
 <p>安装X</p>
@@ -232,9 +232,9 @@ alsamixer
   
   <entry>
     <title type="html"><![CDATA[Archlinux-2012.12 安装]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/"/>
+    <link href="http://coswind.herokuapp.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/"/>
     <updated>2013-01-12T21:25:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang</id>
+    <id>http://coswind.herokuapp.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang</id>
     <content type="html"><![CDATA[<h2>检查网络</h2>
 
 <p>默认情况dhcp服务是enabled，如果使用的是有线，并且调制解调器和路由器工作良好，网络是正常可用的。</p>

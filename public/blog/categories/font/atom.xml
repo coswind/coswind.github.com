@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: font | COSWIND BLOG]]></title>
-  <link href="http://coswind.github.com/blog/categories/font/atom.xml" rel="self"/>
-  <link href="http://coswind.github.com/"/>
-  <updated>2013-01-21T21:02:06+08:00</updated>
-  <id>http://coswind.github.com/</id>
+  <title><![CDATA[Category: font | COSWIND'S BLOG]]></title>
+  <link href="http://coswind.herokuapp.com/blog/categories/font/atom.xml" rel="self"/>
+  <link href="http://coswind.herokuapp.com/"/>
+  <updated>2013-01-24T21:54:56+08:00</updated>
+  <id>http://coswind.herokuapp.com/</id>
   <author>
     <name><![CDATA[Yi Xia]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Archlinux-Font 配置]]></title>
-    <link href="http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi/"/>
+    <link href="http://coswind.herokuapp.com/blog/2013/01/19/archlinux-font-pei-zhi/"/>
     <updated>2013-01-19T18:48:00+08:00</updated>
-    <id>http://coswind.github.com/blog/2013/01/19/archlinux-font-pei-zhi</id>
+    <id>http://coswind.herokuapp.com/blog/2013/01/19/archlinux-font-pei-zhi</id>
     <content type="html"><![CDATA[<p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
 
 <h2>系统配置 [/etc/fonts/*]</h2>
