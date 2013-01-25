@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>COSWIND'S BLOG</title>
+	<title>Archlinux-Font 配置 - COSWIND'S BLOG</title>
 	<meta name="author" content="Yi Xia">
 
 	
@@ -72,18 +72,9 @@
 	
 		
 	
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/19/archlinux-font-pei-zhi/">
-		
-			Archlinux-Font 配置</a>
-	</h2>
-	<div class="entry-content">
-		<p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Archlinux-Font 配置</h2>
+	<div class="entry-content"><p>默认的配置，无论是英文还是中文，显示效果都不太满意。网上例子大都解释不清楚，不敢随意尝试，怕越改越乱。</p>
 
 <h2>系统配置 [/etc/fonts/*]</h2>
 
@@ -281,10 +272,7 @@
 
 <blockquote><p>这里还要补充的一点是<code>mode</code>的设定，是<code>append</code>，而不是<code>prepend</code>，前者是将字体的优先级设定在匹配字体的后面，即在匹配不到的时候作为第一候选，而后者相反。
 因为中文字型大都包含英文字体，所以使得不仅中文是设定字体，英文都强制的使用了中文字型里的英文字体，实在是太难看，而且所有的英文字体都是如此。</p></blockquote>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -311,110 +299,20 @@
 	
 </div></article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/">
-		
-			Archlinux基本配置</a>
-	</h2>
-	<div class="entry-content">
-		<h2>安装图形界面</h2>
-
-<p>安装X</p>
-
-<pre><code>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
-</code></pre>
-
-<p>安装mesa获得3D支持</p>
-
-<pre><code>pacman -S mesa
-</code></pre>
-
-<p>安装显卡驱动</p>
-
-<pre><code>pacman -S nvidia
-</code></pre>
-
-<p>笔记本安装触屏驱动</p>
-
-<pre><code>pacman -S xf86-input-synaptics
-</code></pre>
-
-<h2>测试X</h2>
-
-<p>安装默认的测试环境</p>
-
-<pre><code>pacman -S xorg-twm xorg-xclock xterm
-rm ~/.xinitrc
-startx
-</code></pre>
-
-<p>删除了.xinitrc, startx会启动默认的测试环境</p>
-
-<h2>安装awesome</h2>
-
-<pre><code>pacman -S awesome
-</code></pre>
-
-<p>启动X的时候默认启动awesome</p>
-
-<pre><code>cp /etc/skel/.xinitrc ~/
-echo "exec awesome" &gt;&gt; ~/.xinitrc
-</code></pre>
-
-<p>如果想登录后自动启动awesome</p>
-
-<pre><code>[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx &gt;&gt; .bash_profile [or .zprofile]
-</code></pre>
-
-<h2>声音配置</h2>
-
-<p>默认不需要多余的配置，只需要解除默认的静音状态即可</p>
-
-<pre><code>pacman -S alsa-utils
-alsamixer
-</code></pre>
-
-<p>按照提示，解除master的静音状态</p>
-
-		
-		
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-13T16:42:00+08:00" pubdate data-updated="true">Jan 13<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/archlinux/'>archlinux</a>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 
 </div>
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-        <a href="/blog/page/2/" class="next">Next</a>
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
 	<audio preload loop>
     <source src="http://data4.5sing.com/T14zJ5ByYT1R47IVrK.mp3">
 </audio>

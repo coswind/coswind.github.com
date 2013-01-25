@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Archlinux基本配置 - COSWIND'S BLOG</title>
+	<title>Category: archlinux - COSWIND'S BLOG</title>
 	<meta name="author" content="Yi Xia">
 
 	
-	<meta name="description" content="安装图形界面 安装X pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils 安装mesa获得3D支持 pacman -S mesa 安装显卡驱动 pacman -S nvidia 笔记本安装触屏驱动 pacman -S xf86 &hellip;">
+	<meta name="description" content="Category: archlinux">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -72,105 +72,64 @@
 	
 		
 	
-	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Archlinux基本配置</h2>
-	<div class="entry-content"><h2>安装图形界面</h2>
-
-<p>安装X</p>
-
-<pre><code>pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils
-</code></pre>
-
-<p>安装mesa获得3D支持</p>
-
-<pre><code>pacman -S mesa
-</code></pre>
-
-<p>安装显卡驱动</p>
-
-<pre><code>pacman -S nvidia
-</code></pre>
-
-<p>笔记本安装触屏驱动</p>
-
-<pre><code>pacman -S xf86-input-synaptics
-</code></pre>
-
-<h2>测试X</h2>
-
-<p>安装默认的测试环境</p>
-
-<pre><code>pacman -S xorg-twm xorg-xclock xterm
-rm ~/.xinitrc
-startx
-</code></pre>
-
-<p>删除了.xinitrc, startx会启动默认的测试环境</p>
-
-<h2>安装awesome</h2>
-
-<pre><code>pacman -S awesome
-</code></pre>
-
-<p>启动X的时候默认启动awesome</p>
-
-<pre><code>cp /etc/skel/.xinitrc ~/
-echo "exec awesome" &gt;&gt; ~/.xinitrc
-</code></pre>
-
-<p>如果想登录后自动启动awesome</p>
-
-<pre><code>[[ -z $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]] &amp;&amp; exec startx &gt;&gt; .bash_profile [or .zprofile]
-</code></pre>
-
-<h2>声音配置</h2>
-
-<p>默认不需要多余的配置，只需要解除默认的静音状态即可</p>
-
-<pre><code>pacman -S alsa-utils
-alsamixer
-</code></pre>
-
-<p>按照提示，解除master的静音状态</p>
-</div>
+	<div id="content" class="inner">
+	
 
 
-<div class="meta">
-	<div class="date">
+	
+	
+	<section class="archives"><h1 class="year">2013</h1>
+
+<article>
+	<h2 class="title"><a href="/blog/2013/01/19/archlinux-font-pei-zhi/">Archlinux-Font 配置</a></h2>
+	<div class="meta">
+		<span class="date">Jan 19</span>
+		<span class="tags">
 
 
+	<a class='category' href='/blog/categories/archlinux/'>archlinux</a>, <a class='category' href='/blog/categories/font/'>font</a>
 
 
+</span>
+	    
+	</div>
+</article>
+
+	
 
 
-
-
-  
-
-
-<time datetime="2013-01-13T16:42:00+08:00" pubdate data-updated="true">Jan 13<span>th</span>, 2013</time></div>
-	<div class="tags">
+<article>
+	<h2 class="title"><a href="/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/">Archlinux基本配置</a></h2>
+	<div class="meta">
+		<span class="date">Jan 13</span>
+		<span class="tags">
 
 
 	<a class='category' href='/blog/categories/archlinux/'>archlinux</a>
 
 
-</div>
-	
-</div></article>
-
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
+</span>
+	    
 	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
-</div>
+</article>
 
+	
+
+
+<article>
+	<h2 class="title"><a href="/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/">Archlinux-2012.12 安装</a></h2>
+	<div class="meta">
+		<span class="date">Jan 12</span>
+		<span class="tags">
+
+
+	<a class='category' href='/blog/categories/archlinux/'>archlinux</a>
+
+
+</span>
+	    
+	</div>
+</article>
 
 </div>
 	<audio preload loop>

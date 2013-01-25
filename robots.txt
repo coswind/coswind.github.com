@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://coswind.github.com/sitemap.xml 
+Sitemap: http://coswind.herokuapp.com/sitemap.xml 
