@@ -323,21 +323,25 @@
 </div>
 <script type="text/javascript">
     (function($){
-        var isPlaying = localStorage.isPlaying || true;
+        var isPlaying = localStorage.isPlaying ? JSON.parse(localStorage.isPlaying) : true;
         var el = $('.music_bg_image');
         var audioEl = $('audio')[0];
-        $('#music_player').click(function() {
+        function togglePlaying() {
             el.fadeOut();
             if (isPlaying) {
-                el.css('background-position', '-207px -67px');
-                el.fadeIn(function() { audioEl.pause(); });
-            } else {
                 el.css('background-position', '-230px -67px');
                 el.fadeIn(function() { audioEl.play(); });
+            } else {
+                el.css('background-position', '-207px -67px');
+                el.fadeIn(function() { audioEl.pause(); });
             }
+        }
+        togglePlaying();
+        $('#music_player').click(function() {
             isPlaying = !isPlaying;
+            togglePlaying();
             localStorage.isPlaying = isPlaying;
-        }).trigger('click');
+        });
     })(jQuery);
 </script>
 
