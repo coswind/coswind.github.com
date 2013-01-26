@@ -1,0 +1,29 @@
+/*! gotop tooltips */
+#gotop {
+    position: fixed;
+    right: 32px;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.gotop_bg_color {
+    width: 41px;
+    height: 41px;
+    background-color: $color-gray04;
+    border-radius:90px;
+}
+
+.gotop_bg_image {
+    position: relative;
+    width: 13px;
+    height: 8px;
+    left: 14px;
+    bottom: -15px;
+    background: url(/images/go-to-top-arrow-black.png) no-repeat;
+}
+
+#gotop:hover .gotop_bg_color {
+    background-color: $color-gray03;
+}
+

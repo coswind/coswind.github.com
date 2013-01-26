@@ -27,3 +27,24 @@
     background-color: $color-gray03;
 }
 
+#music_playlist {
+    position: fixed;
+    left: 32px;
+    bottom: 62px;
+    cursor: pointer;
+    list-style: none;
+    display: none;
+}
+
+#music_playlist li {
+    background-color: $color-gray04;
+    border-left: 4px solid $color-gray03;
+    font-size: 12px;
+    padding: 5px 8px;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+#music_playlist li:hover {
+    background-color: $color-gray03;
+}

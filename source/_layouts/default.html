@@ -8,6 +8,7 @@
 	{% endunless %}
 	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
 	{% include music.html %}
+	{% include gotop.html %}
 	<footer id="footer" class="inner">{% include footer.html %}</footer>
 	{% include after_footer.html %}
 </body>
