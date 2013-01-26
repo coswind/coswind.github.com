@@ -135,6 +135,7 @@
 	<audio preload loop>
     <source src="/media/background-music.mp3">
 </audio>
+<ul id="music_playlist"></ul>
 <div id="music_player">
     <div class="music_bg_color">
         <div class="music_bg_image"></div>
@@ -142,9 +143,29 @@
 </div>
 <script type="text/javascript">
     (function($){
-        var isPlaying = localStorage.isPlaying ? JSON.parse(localStorage.isPlaying) : true;
-        var el = $('.music_bg_image');
-        var audioEl = $('audio')[0];
+        var isPlaying  = localStorage.isPlaying ? JSON.parse(localStorage.isPlaying) : true;
+        var isWhich    = localStorage.isWhich || 0;
+        var el         = $('.music_bg_image');
+        var audioEl    = $('audio')[0];
+        var playlistEl = $('#music_playlist');
+        var playlist   = [
+            { title: '「さくら ～あなたに出会えてよか」', path: '/media/background-music.mp3' },
+            { title: '「I Love You」', path: '/media/background-music-01.mp3' }
+        ];
+        /*  music playlist */
+        $.each(playlist, function(num, obj) {
+            playlistEl.append('<li path="' + obj.path + '">' + obj.title + '</li>');
+        });
+        $('#music_playlist li').click(function() {
+            var that = $(this);
+            $('#music_playlist li').css('border-color', '#ccc');
+            that.css('border-color', '#555');
+            audioEl.pause();
+            audioEl.src = that.attr('path');
+            isPlaying = true;
+            togglePlaying();
+        });
+        /*  music player  */
         function togglePlaying() {
             el.fadeOut();
             if (isPlaying) {
@@ -154,13 +175,31 @@
                 el.css('background-position', '-207px -67px');
                 el.fadeIn(function() { audioEl.pause(); });
             }
+            localStorage.isPlaying = isPlaying;
         }
         togglePlaying();
         $('#music_player').click(function() {
             isPlaying = !isPlaying;
             togglePlaying();
-            localStorage.isPlaying = isPlaying;
         });
+        /*  hover event */
+        var fadeOutTimeout;
+        $('#music_player .music_bg_color').hover(function() {
+            playlistEl.fadeIn();
+            clearTimeout(fadeOutTimeout);
+        }, function() {
+            fadeOutTimer(); 
+        });
+        playlistEl.hover(function() {
+            clearTimeout(fadeOutTimeout);
+        }, function() {
+            fadeOutTimer();
+        });
+        function fadeOutTimer() {
+            fadeOutTimeout = setTimeout(function() {
+                playlistEl.fadeOut();
+            }, 200);
+        }
     })(jQuery);
 </script>
 

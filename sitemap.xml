@@ -2,21 +2,21 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://coswind.herokuapp.com/blog/2013/01/12/archlinux-2012-dot-12-an-zhuang/</loc>
-        <lastmod>2013-01-25T21:38:09+08:00</lastmod>
+        <lastmod>2013-01-26T14:31:20+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://coswind.herokuapp.com/blog/2013/01/13/archlinuxan-zhuang-awesome-3-dot-5ji-pei-zhi/
         </loc>
-        <lastmod>2013-01-25T21:38:09+08:00</lastmod>
+        <lastmod>2013-01-26T14:31:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://coswind.herokuapp.com/blog/2013/01/19/archlinux-font-pei-zhi/</loc>
-        <lastmod>2013-01-25T21:38:09+08:00</lastmod>
+        <lastmod>2013-01-26T14:31:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://coswind.herokuapp.com/</loc>
-        <lastmod>2013-01-25T21:38:09+08:00</lastmod>
+        <lastmod>2013-01-26T14:31:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://coswind.herokuapp.com/robots.txt</loc>
@@ -24,6 +24,6 @@
     </url>
     <url>
         <loc>http://coswind.herokuapp.com/blog/archives/</loc>
-        <lastmod>2013-01-25T21:38:09+08:00</lastmod>
+        <lastmod>2013-01-26T14:31:20+08:00</lastmod>
     </url>
 </urlset>
