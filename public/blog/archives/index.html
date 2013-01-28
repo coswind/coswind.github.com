@@ -169,18 +169,25 @@
             el.fadeOut();
             if (isPlaying) {
                 el.css('background-position', '-230px -67px');
-                el.fadeIn(function() { audioEl.play(); });
+                el.fadeIn(function() { 
+                    audioEl.play();
+                });
             } else {
                 el.css('background-position', '-207px -67px');
+                localStorage.currentTime = audioEl.currentTime || localStorage.currentTime;
                 el.fadeIn(function() { audioEl.pause(); });
             }
             localStorage.isPlaying = isPlaying;
         }
-        togglePlaying();
+        $(audioEl).bind('canplay', function() {
+            console.log('canplay');
+            audioEl.currentTime = localStorage.currentTime || 0;
+        });
         $('#music_player').click(function() {
             isPlaying = !isPlaying;
             togglePlaying();
         });
+        togglePlaying();
         /*  hover event */
         var fadeOutTimeout;
         $('#music_player .music_bg_color').hover(function() {
